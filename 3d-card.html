@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d Card Swing</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        .img-container {
+            height: 80vh;
+            width: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            margin-left: 320px;
+        }
+        
+        .img-container img{
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: perspective(800px);
+            transition: 1s all cubic-bezier(.64, .02, .40, 1);
+        } 
+        .background {
+            height: 70vh;
+        }
+        .img-container:hover .background {
+            transform: perspective(800px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(40px) translateZ(0px);
+        }
+        .mid {
+            height: 68vh;
+        }
+        .img-container:hover .mid {
+            transform:perspective(800px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(40px) translateZ(50px);
+        }
+        .top {
+            height: 66vh;
+        }
+        .img-container:hover .top {
+            transform:perspective(800px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(40px) translateZ(100px);
+        }
+        .tippytop {
+            top: 142px;
+            height: 10vh;
+        }
+        .img-container:hover .tippytop {
+            transform:perspective(800px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(40px) translateZ(90px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img src="images/back.svg" alt="the background" class="background">
+            <img src="images/mid.svg" alt="the mid" class="mid">
+            <img src="images/top.svg" alt="the top" class="top">
+            <img src="images/tippytop.svg" alt="the tippytop" class="tippytop">
+        </div>
+    </div>
+</body>
+</html>

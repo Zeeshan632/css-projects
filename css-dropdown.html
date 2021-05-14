@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS dropdowns</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            margin: 3rem 20rem;
+        }
+        details {
+            margin-top: 30px;
+        }
+        summary {
+            width: 50vw;
+            padding: 20px;
+            border-radius: 10px;
+            background: #49E0F0;
+            color: #095b66;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            outline: none;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+        
+        summary:hover {
+            background: #2dd0e2;
+        }
+        h1 {
+            padding: 1rem;
+            color: rgba(0,0,0,0.6);
+            animation: dropdown 0.2s ease forwards;
+        }
+        ul {
+            padding-left: 2rem;
+            color: rgba(0,0,0,0.8);
+        }
+        li {
+            padding: 1rem 0rem 0rem 1rem;
+            opacity: 0;
+        }
+        ul li:nth-child(1){
+            animation: dropdown 0.2s ease forwards;
+            animation-delay: 0.1s;            
+        }
+        ul li:nth-child(2){
+            animation: dropdown 0.2s ease forwards;
+            animation-delay: 0.2s;            
+        }
+        ul li:nth-child(3){
+            animation: dropdown 0.2s ease forwards;
+            animation-delay: 0.3s;            
+        }
+        ul li:nth-child(4){
+            animation: dropdown 0.2s ease forwards;
+            animation-delay: 0.4s;            
+        }
+        @keyframes dropdown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <summary>MY SKILL SET</summary>
+        <h1>These are my Skill Set</h1>
+        <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SCSS</li>
+        </ul>
+    </details>
+    <details>
+        <summary>My Portfolio</summary>
+        <h1>These are my projects</h1>
+        <ul>
+            <li>Project-1</li>
+            <li>Project-2</li>
+            <li>Project-3</li>
+            <li>Project-4</li>
+        </ul>
+    </details>
+</body>
+</html>
